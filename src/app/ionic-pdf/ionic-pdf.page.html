@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Invoice
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="primary" (click)="exportPdf()">
+        <ion-icon slot="icon-only" name="print"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <img src="{{image}}" *ngIf="image"/>
+  <div class="printable-content">
+    <div class="printable-area" id="printable-area">
+      <h4>WEEK EBDUBG DATE</h4>
+      <h4>LAST OF SOCIAL</h4>
+      <h4>WORKER NAME</h4>
+      <table class="detail-table">
+        <tr>
+          <th width="10%">Days</th>
+          <th width="30%">In</th>
+          <th width="30%">Out</th>
+          <th width="30%">Hours</th>
+        </tr>
+        <tr *ngFor="let d of datas">
+          <td>{{d.day}}</td>
+          <td>{{d.in}}</td>
+          <td>{{d.out}}</td>
+          <td>{{d.hours}}</td>
+        </tr>
+      </table>
+
+      <table class="footer-table">
+        <tr>
+          <td>Total hours</td>
+          <td width="30%">{{30}}</td>
+        </tr>
+      </table>
+
+      <table class="sign-table">
+        <tr>
+          <th>WORKER SIGN</th>
+          <th width="50%">CIENT SIGN</th>
+        </tr>
+        <tr>
+          <td><img [src]="workerSign" *ngIf="workerSign" /></td>
+          <td><img [src]="clientSign" *ngIf="clientSign" /></td>
+        </tr>
+      </table>
+    </div>
+    <ion-button expand="full" (click)="openWorkerSign()">
+      Open WorkereSign
+    </ion-button>
+    <ion-button expand="full" (click)="openClientSign()">
+      Open ClientSign
+    </ion-button>
+  </div>
+</ion-content>

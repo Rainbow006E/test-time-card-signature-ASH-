@@ -29,4 +29,18 @@ export class HomePage {
 
     return await signModal.present();
   }
+
+  async createNewPdf() {
+    // const doc = await PDFNet.PDFDoc.create();
+
+    // // optionally perform some document processing using read write operations
+    // // found under 'Editing Page Content' or 'Page Manipulation'
+
+    // // save the document to a memory buffer
+    // const buf = await doc.saveMemoryBuffer(PDFNet.SDFDoc.SaveOptions.e_linearized);
+
+    // // optionally save the document to the filesystem
+    // saveAs(new Blob([buf], {type: 'application/pdf'}), 'test.pdf');
+  }
 }
+

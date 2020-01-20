@@ -32,8 +32,8 @@ export class SignaturePage implements OnInit {
 
   async drawComplete() {
     this.signatureImage = this.signaturePad.toDataURL();
-    console.log('test signature pad : ', this.signaturePad);
-    console.log(JSON.stringify(this.signatureImage));
+    // console.log('test signature pad : ', this.signaturePad);
+    // console.log(JSON.stringify(this.signatureImage));
     await this.modalController.dismiss(this.signatureImage);
   }
 

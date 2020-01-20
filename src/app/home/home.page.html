@@ -6,10 +6,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="ion-padding">
   <h2>Welcome to Signature!</h2>
   <ion-button expand="full" (click)="openSignatureModel()">
     Open Signature
   </ion-button>
   <div><img [src]="signatureImage" *ngIf="signatureImage" /></div>
+  <ion-button expand="full" (click)="createNewPdf()"></ion-button>
 </ion-content>
